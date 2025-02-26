@@ -1,0 +1,6 @@
+{
+  "maximum-line-length": 120,
+  "tags": {
+    "not-in": ["wip"]
+  }
+}

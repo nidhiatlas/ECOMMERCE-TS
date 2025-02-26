@@ -1,0 +1,28 @@
+{
+  "name": "ecommerce-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidhiatlas/ECOMMERCE-TS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidhiatlas/ECOMMERCE-TS/issues"
+  },
+  "homepage": "https://github.com/nidhiatlas/ECOMMERCE-TS#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.5"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "allure-playwright": "^3.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
