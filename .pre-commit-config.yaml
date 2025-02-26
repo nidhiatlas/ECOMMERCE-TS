@@ -1,0 +1,20 @@
+- repo: https://github.com/pre-commit/mirrors-eslint
+  rev: v7.25.0
+  hooks:
+    - id: eslint
+      name: eslint
+      args: ['--ext', '.ts']
+
+- repo: https://github.com/pre-commit/gherkin-linter
+  rev: v1.0.1
+  hooks:
+    - id: gherkin-linter
+      name: Gherkin Linter
+      args: ['--config', '.gherkin-lintrc']
+
+- repo: https://github.com/pre-commit/mirrors-pylint
+  rev: v2.14.2
+  hooks:
+    - id: pylint
+      name: pylint
+      args: ['--disable=R,C']

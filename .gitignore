@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# TypeScript build
+dist/
+build/
+
+# IDE files
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Poetry virtual environments
+.venv/
+env/
+ENV/
+*.env
+
+# Allure reports
+allure-results/
+allure-report/
+
+# OS Files
+.DS_Store
+Thumbs.db
