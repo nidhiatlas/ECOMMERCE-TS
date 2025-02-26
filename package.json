@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "cucumber-js test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nidhiatlas/ECOMMERCE-TS.git"
@@ -16,13 +18,13 @@
   },
   "homepage": "https://github.com/nidhiatlas/ECOMMERCE-TS#readme",
   "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
     "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.5"
+    "@types/node": "^22.13.5",
+    "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^11.2.0",
     "allure-playwright": "^3.2.0",
-    "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   }
 }
