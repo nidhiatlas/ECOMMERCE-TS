@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test"
+    "test": "cucumber-js test",
+    "posttest": "allure serve reports/allure-results"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,10 @@
     "ts-node": "^10.9.2"
   },
   "dependencies": {
+    "allure-cucumberjs": "^3.2.0",
     "allure-playwright": "^3.2.0",
-    "typescript": "^5.7.3"
+    "playwright": "^1.50.1",
+    "typescript": "^5.8.2"
   },
   "directories": {
     "test": "tests"

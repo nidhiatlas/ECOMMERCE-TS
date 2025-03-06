@@ -6,6 +6,10 @@
       "esModuleInterop": true,
       "outDir": "dist"
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
+    "include": [
+    "steps/**/*.ts",
+    "features/**/*.ts",
+    "setup/**/*.ts"
+  ]
+    
   }

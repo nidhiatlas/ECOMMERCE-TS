@@ -1,5 +1,29 @@
 {
     "default":{
-        "paths":["src/test/features"]
+        "formatOptions":{
+            "snippetInterface":"async-await",
+            "resultsDir": "reports/allure-results"
+            
+        },
+      "paths":[
+        "src/test/features/"
+    ],
+      "publishQuit":true,
+      "dryRun":false,
+      "require":[
+        "src/test/steps/*.ts"
+      ],
+      "requireModule":[
+        "ts-node/register"
+      ],
+      "format" : [
+        "html:reports/cucumber-html.html",
+        "json:reports/cucumber-json.json",
+        "allure-cucumberjs/reporter"
+      ]
+      
     }
+   
+    
+    
 }

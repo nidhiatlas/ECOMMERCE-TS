@@ -1,0 +1,383 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "amazon.in-end-to-end-shopping-journey;login-to-amazon.in",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Login to Amazon.in",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Amazon.in homepage",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4863943399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 445956500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I enter my username \"jaiswalnidhi675@gmail.com\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1360024899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter my password \"nidhi.27\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 847896899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on the \"Sign In\" button",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53029100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see the account homepage",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2235115599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "amazon.in-end-to-end-shopping-journey;search-for-a-product",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Search for a product",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Amazon.in homepage",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1005689100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I search for \"Shoes\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1654395299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see results for \"Shoes\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51473700
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "amazon.in-end-to-end-shopping-journey;apply-filters-for-a-product",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Apply filters for a product",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Amazon.in homepage",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2031947700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I search for a product \"Shoes\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 508500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I apply filter by brand \"Nike\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:65"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5004990200,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\a90011941\\ECOMMERCE\\ECOMMERCE-TS\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:564:17)\n    at processTimers (node:internal/timers:507:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I apply filter by material \"Leather\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:80"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see products filtered by brand \"Nike\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:87"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I should see products filtered by material \"Leather\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:93"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "amazon.in-end-to-end-shopping-journey;add-the-first-product-to-the-cart",
+        "keyword": "Scenario",
+        "line": 24,
+        "name": "Add the first product to the cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Amazon.in homepage",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1086576299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 25,
+            "name": "I search for a product \"Nike Shoes\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 242600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "I add the first product to the cart",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:99"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5002443300,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\a90011941\\ECOMMERCE\\ECOMMERCE-TS\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:564:17)\n    at processTimers (node:internal/timers:507:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 27,
+            "name": "The product should be added to the cart",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:104"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "amazon.in-end-to-end-shopping-journey;verify-the-product-in-the-cart",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "Verify the product in the cart",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I open the Amazon.in homepage",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1185052600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I search for a product \"Nike Shoes\"",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 161999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I add the first product to the cart",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:99"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5003270300,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\a90011941\\ECOMMERCE\\ECOMMERCE-TS\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:564:17)\n    at processTimers (node:internal/timers:507:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I go to the cart",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:109"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see \"Nike Shoes\" in the cart",
+            "match": {
+              "location": "src\\test\\steps\\amazonSteps.ts:113"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "amazon.in-end-to-end-shopping-journey",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Amazon.in End-to-End Shopping Journey",
+    "tags": [],
+    "uri": "src\\test\\features\\amazon.feature"
+  }
+]
