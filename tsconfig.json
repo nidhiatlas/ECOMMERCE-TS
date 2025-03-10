@@ -7,9 +7,9 @@
       "outDir": "dist"
     },
     "include": [
-    "steps/**/*.ts",
-    "features/**/*.ts",
-    "setup/**/*.ts"
+    "src/test/features/**/*.ts",
+    "src/test/steps/**/*.ts",
+    "src/playwrightconfig.ts"
   ]
     
   }
