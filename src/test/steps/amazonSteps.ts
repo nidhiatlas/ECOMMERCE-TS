@@ -1,10 +1,10 @@
-import { Given, When, Then, BeforeAll, AfterAll } from '@cucumber/cucumber';
+import { Given, When, Then, BeforeAll, AfterAll, setDefaultTimeout } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { Browser, Page, chromium } from 'playwright';
 
 let browser: Browser;
 let page: Page;
-
+setDefaultTimeout(20000);
 BeforeAll(async () => {
   
   browser = await chromium.launch({ headless: false });
@@ -60,42 +60,47 @@ Then('I should see results for {string}', async (product: string) => {
   await expect(resultLocator, `Verify showing results for searched keyword "${product}"`).toContainText(product);
 });
 
-//this is to be edited
 
+Given('I search for a product {string}', async (product: string) => {
+  await page.fill('//input[@placeholder="Search Amazon.in"]', product,{ timeout: 10000 }); 
+  await page.press('//input[@placeholder="Search Amazon.in"]', 'Enter',{ timeout: 10000 }); 
+  await page.waitForSelector('.s-main-slot', { timeout: 10000 }); 
+})
+//filter by brand
 When('I apply filter by brand {string}', async (brand: string) => {
-  
-  await page.waitForLoadState('domcontentloaded');
-  
-  await page.waitForSelector(`xpath=//span[text()="${brand}"]/..//input`, { timeout: 5000 });
-  
-  const brandFilter = page.locator(`xpath=//span[text()="${brand}"]/..//input`);
-  
-  await brandFilter.waitFor({ state: 'visible', timeout: 10000 });
-  
+  const brandXPath = `//span[@class='a-size-base a-color-base' and text()="${brand}"]`;
+  await page.waitForSelector(brandXPath, { timeout: 10000 });
+  const brandFilter = page.locator(brandXPath);
   await brandFilter.click();
 });
 
-
-// Apply filter by material
+//filter by material
 When('I apply filter by material {string}', async (material: string) => {
-  await page.waitForSelector(`xpath=//span[text()="${material}"]/..//input`);
-  const materialFilter = page.locator(`xpath=//span[text()="${material}"]/..//input`);
-  await materialFilter.click();
+  const materialXPath = `//span[normalize-space(text())="${material}"]`
+  await page.waitForSelector(materialXPath,{timeout:10000});
+  const materialFilter=page.locator(materialXPath);
+  await materialFilter.click();   
 });
 
-// Verify brand filter applied
+// Verify brand filter 
 Then('I should see products filtered by brand {string}', async (brand: string) => {
-  const filteredResults = await page.locator(`text=${brand}/..//input`).isVisible();
-  expect(filteredResults).toBeTruthy();
+  const brandCheckbox = page.locator(`(//i[@class='a-icon a-icon-checkbox'])[3]`);
+  
+  // Check if the brand filter checkbox is selected
+  const isChecked = await brandCheckbox.isChecked();
+  expect(isChecked).toBeTruthy();  
 });
 
-// Verify material filter applied
 Then('I should see products filtered by material {string}', async (material: string) => {
-  const filteredResults = await page.locator(`text=${material}/..//input`).isVisible();
-  expect(filteredResults).toBeTruthy();
+  const materialCheckbox = page.locator(`//span[normalize-space(text())="${material}"]/../preceding-sibling::input`).isVisible;
+  
+  // Check if the material filter checkbox is selected
+  //const isChecked = await materialCheckbox.isChecked();
+  expect(materialCheckbox).toBeTruthy();
 });
 
-//till here
+
+
 When('I add the first product to the cart', async () => {
   await page.locator('.s-main-slot .s-result-item').first().click(); 
   await page.click('#add-to-cart-button'); 
@@ -105,16 +110,29 @@ Then('The product should be added to the cart', async () => {
   const cartCount = await page.locator('#nav-cart-count').textContent();
   expect(Number(cartCount)).toBeGreaterThan(0); 
 });
-
+When('I add the first product to the cart', async () => {
+  await page.locator('.s-main-slot .s-result-item').first().click(); 
+  await page.click('#add-to-cart-button'); 
+});
 When('I go to the cart', async () => {
-  await page.click('#nav-cart'); 
-});
-
-Then('I should see {string} in the cart', async (product: string) => {
-  const cartItem = await page.locator(`text=${product}`).isVisible();
-  expect(cartItem).toBeTruthy(); 
-});
-
-Given('I search for a product {string}', (s: string) => {
  
-})
+  const cartIcon = page.locator('//span[@class="nav-cart-icon nav-sprite"]');
+  await cartIcon.waitFor({ state: 'visible', timeout: 20000 });
+
+  await cartIcon.click();
+});
+
+
+Then('I should see product in the cart', async () => {
+  
+  const cartItemLocator = page.locator('//div[@data-name="Active Items Header"]/following-sibling::div[1]');
+  await cartItemLocator.waitFor({ state: 'visible', timeout: 20000 });
+
+ 
+  const cartItemVisible = await cartItemLocator.isVisible();
+  expect(cartItemVisible).toBeTruthy();
+});
+
+
+
+

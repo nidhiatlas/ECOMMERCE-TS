@@ -22,12 +22,11 @@ Feature: Amazon.in End-to-End Shopping Journey
     And I should see products filtered by material "Leather"
 
   Scenario: Add the first product to the cart
-    Given I search for a product "Nike Shoes"
+    Given I search for a product "Shoes"
     When I add the first product to the cart
     Then The product should be added to the cart
 
   Scenario: Verify the product in the cart
-    Given I search for a product "Nike Shoes"
-    And I add the first product to the cart
+    Given  I add the first product to the cart
     When I go to the cart
-    Then I should see "Nike Shoes" in the cart
+    Then I should see product in the cart

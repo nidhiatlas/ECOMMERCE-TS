@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4863943399
+              "duration": 3734611799
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 445956500
+              "duration": 667023499
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1360024899
+              "duration": 824969599
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 847896899
+              "duration": 243437200
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 53029100
+              "duration": 903886199
             }
           },
           {
@@ -84,7 +84,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2235115599
+              "duration": 399519700
             }
           }
         ],
@@ -108,7 +108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1005689100
+              "duration": 6488280900
             }
           },
           {
@@ -121,7 +121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1654395299
+              "duration": 1402652400
             }
           },
           {
@@ -134,7 +134,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 51473700
+              "duration": 25440099
             }
           }
         ],
@@ -158,7 +158,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2031947700
+              "duration": 1918010600
             }
           },
           {
@@ -167,11 +167,11 @@
             "line": 18,
             "name": "I search for a product \"Shoes\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:118"
+              "location": "src\\test\\steps\\amazonSteps.ts:64"
             },
             "result": {
               "status": "passed",
-              "duration": 508500
+              "duration": 1184449500
             }
           },
           {
@@ -180,12 +180,11 @@
             "line": 19,
             "name": "I apply filter by brand \"Nike\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:65"
+              "location": "src\\test\\steps\\amazonSteps.ts:70"
             },
             "result": {
-              "status": "failed",
-              "duration": 5004990200,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\a90011941\\ECOMMERCE\\ECOMMERCE-TS\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:564:17)\n    at processTimers (node:internal/timers:507:7)"
+              "status": "passed",
+              "duration": 1091766599
             }
           },
           {
@@ -194,11 +193,11 @@
             "line": 20,
             "name": "I apply filter by material \"Leather\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:80"
+              "location": "src\\test\\steps\\amazonSteps.ts:78"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 1801455600
             }
           },
           {
@@ -207,11 +206,11 @@
             "line": 21,
             "name": "I should see products filtered by brand \"Nike\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:87"
+              "location": "src\\test\\steps\\amazonSteps.ts:86"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 836186899
             }
           },
           {
@@ -220,11 +219,11 @@
             "line": 22,
             "name": "I should see products filtered by material \"Leather\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:93"
+              "location": "src\\test\\steps\\amazonSteps.ts:94"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 863800
             }
           }
         ],
@@ -248,20 +247,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1086576299
+              "duration": 2133110199
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 25,
-            "name": "I search for a product \"Nike Shoes\"",
+            "name": "I search for a product \"Shoes\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:118"
+              "location": "src\\test\\steps\\amazonSteps.ts:64"
             },
             "result": {
               "status": "passed",
-              "duration": 242600
+              "duration": 1605681399
             }
           },
           {
@@ -269,13 +268,9 @@
             "keyword": "When ",
             "line": 26,
             "name": "I add the first product to the cart",
-            "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:99"
-            },
             "result": {
-              "status": "failed",
-              "duration": 5002443300,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\a90011941\\ECOMMERCE\\ECOMMERCE-TS\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:564:17)\n    at processTimers (node:internal/timers:507:7)"
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
@@ -284,7 +279,7 @@
             "line": 27,
             "name": "The product should be added to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:104"
+              "location": "src\\test\\steps\\amazonSteps.ts:109"
             },
             "result": {
               "status": "skipped",
@@ -312,43 +307,26 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1185052600
+              "duration": 2323044300
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
             "line": 30,
-            "name": "I search for a product \"Nike Shoes\"",
-            "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:118"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 161999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 31,
             "name": "I add the first product to the cart",
-            "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:99"
-            },
             "result": {
-              "status": "failed",
-              "duration": 5003270300,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\a90011941\\ECOMMERCE\\ECOMMERCE-TS\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:564:17)\n    at processTimers (node:internal/timers:507:7)"
+              "status": "ambiguous",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 32,
+            "line": 31,
             "name": "I go to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:109"
+              "location": "src\\test\\steps\\amazonSteps.ts:117"
             },
             "result": {
               "status": "skipped",
@@ -358,10 +336,10 @@
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 33,
-            "name": "I should see \"Nike Shoes\" in the cart",
+            "line": 32,
+            "name": "I should see product in the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:113"
+              "location": "src\\test\\steps\\amazonSteps.ts:126"
             },
             "result": {
               "status": "skipped",
