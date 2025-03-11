@@ -27,6 +27,6 @@ Feature: Amazon.in End-to-End Shopping Journey
     Then The product should be added to the cart
 
   Scenario: Verify the product in the cart
-    Given  I add the first product to the cart
+    
     When I go to the cart
     Then I should see product in the cart

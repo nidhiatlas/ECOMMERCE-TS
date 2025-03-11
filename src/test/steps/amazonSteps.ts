@@ -1,26 +1,40 @@
-import { Given, When, Then, BeforeAll, AfterAll, setDefaultTimeout } from '@cucumber/cucumber';
+import { Given, When, Then, BeforeAll, AfterAll, setDefaultTimeout, After } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
-import { Browser, Page, chromium } from 'playwright';
-
+import { Browser, Page, chromium, BrowserContext } from 'playwright';
+// import {Allure}
+import * as allure from 'allure-js-commons';
+import { Status } from '@cucumber/cucumber'
 let browser: Browser;
+let context: BrowserContext;
 let page: Page;
+let i: number = 0;
 setDefaultTimeout(20000);
 BeforeAll(async () => {
   
   browser = await chromium.launch({ headless: false });
-  const context = await browser.newContext();
+  context = await browser.newContext();
   page = await context.newPage();
 });
 
+After(async function (scenario) {
+  
+  if (scenario.result?.status === Status.FAILED) {
+    const screenshot = await page.screenshot();
+
+    // Attach screenshot to Allure report
+    this.attach(screenshot, 'image/png'); 
+  }
+});
 AfterAll(async () => {
   
   if (browser) {
     await browser.close();
+    
   }
 });
 
 Given('I open the Amazon.in homepage', async () => {
-  await page.goto('https://www.amazon.in',{timeout:15000});
+ await page.goto('https://www.amazon.in',{timeout:15000});
 });
 
 When('I navigate to the login page', async () => {
@@ -102,18 +116,20 @@ Then('I should see products filtered by material {string}', async (material: str
 
 
 When('I add the first product to the cart', async () => {
-  await page.locator('.s-main-slot .s-result-item').first().click(); 
-  await page.click('#add-to-cart-button'); 
+  await page.locator(`(//div[contains(@class,'a-section aok-relative')])[1]`).click(); 
+  await page.waitForTimeout(3000);
+  const newTab =  context.pages()[1];
+  page = newTab;
+  // page = context.pages()[0];
+  
+  await page.click('//input[@title="Add to Shopping Cart"]'); 
 });
 
 Then('The product should be added to the cart', async () => {
   const cartCount = await page.locator('#nav-cart-count').textContent();
   expect(Number(cartCount)).toBeGreaterThan(0); 
 });
-When('I add the first product to the cart', async () => {
-  await page.locator('.s-main-slot .s-result-item').first().click(); 
-  await page.click('#add-to-cart-button'); 
-});
+
 When('I go to the cart', async () => {
  
   const cartIcon = page.locator('//span[@class="nav-cart-icon nav-sprite"]');

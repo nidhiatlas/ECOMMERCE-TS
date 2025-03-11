@@ -20,7 +20,7 @@ ENV/
 
 # Allure reports
 allure-results/
-allure-report/
+#allure-report/
 
 # OS Files
 .DS_Store
