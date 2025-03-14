@@ -1,9 +1,8 @@
-import { Given, When, Then, BeforeAll, AfterAll, setDefaultTimeout, After } from '@cucumber/cucumber';
+import { Given, When, Then, BeforeAll, AfterAll, setDefaultTimeout, After, Status } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { Browser, Page, chromium, BrowserContext } from 'playwright';
 // import {Allure}
 import * as allure from 'allure-js-commons';
-import { Status } from '@cucumber/cucumber'
 let browser: Browser;
 let context: BrowserContext;
 let page: Page;
@@ -33,7 +32,7 @@ AfterAll(async () => {
   }
 });
 
-Given('I open the Amazon.in homepage', async () => {
+Given(`I open the Amazon.in homepage`, async () => {
  await page.goto('https://www.amazon.in',{timeout:15000});
 });
 
@@ -106,10 +105,10 @@ Then('I should see products filtered by brand {string}', async (brand: string) =
 });
 
 Then('I should see products filtered by material {string}', async (material: string) => {
-  const materialCheckbox = page.locator(`//span[normalize-space(text())="${material}"]/../preceding-sibling::input`).isVisible;
+  const materialCheckbox = page.locator(`(//i[@class='a-icon a-icon-checkbox'])[57]`);
   
   // Check if the material filter checkbox is selected
-  //const isChecked = await materialCheckbox.isChecked();
+  const isChecked = await materialCheckbox.isChecked();
   expect(materialCheckbox).toBeTruthy();
 });
 

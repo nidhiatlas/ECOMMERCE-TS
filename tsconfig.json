@@ -4,12 +4,12 @@
       "module": "CommonJS",
       "strict": true,
       "esModuleInterop": true,
-      "outDir": "dist"
+      "outDir": "dist",
+      "types": ["node", "@playwright/test"]
     },
     "include": [
-    "src/test/features/**/*.ts",
-    "src/test/steps/**/*.ts",
-    "src/playwrightconfig.ts"
-  ]
-    
+  
+    "src/**/*"
+  ],
+  "exclude": ["node_modules"]
   }
