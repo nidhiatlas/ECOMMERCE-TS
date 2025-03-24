@@ -112,8 +112,6 @@ Then('I should see products filtered by material {string}', async (material: str
   expect(materialCheckbox).toBeTruthy();
 });
 
-
-
 When('I add the first product to the cart', async () => {
   await page.locator(`(//div[contains(@class,'a-section aok-relative')])[1]`).click(); 
   await page.waitForTimeout(3000);
