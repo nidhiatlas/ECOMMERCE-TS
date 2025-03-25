@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6891827200
+              "duration": 4586683900
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 588563300
+              "duration": 676873099
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 893277800
+              "duration": 1016521799
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 582404700
+              "duration": 129437100
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1137377900
+              "duration": 1149642999
             }
           },
           {
@@ -84,7 +84,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 419667500
+              "duration": 290126699
             }
           },
           {
@@ -92,7 +92,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140899
+              "duration": 322499
             }
           }
         ],
@@ -116,7 +116,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4890517799
+              "duration": 1180064599
             }
           },
           {
@@ -125,11 +125,11 @@
             "line": 14,
             "name": "I search for \"Shoes\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:64"
+              "location": "src\\test\\steps\\amazonSteps.ts:65"
             },
             "result": {
               "status": "passed",
-              "duration": 1285682799
+              "duration": 835038300
             }
           },
           {
@@ -138,11 +138,11 @@
             "line": 15,
             "name": "I should see results for \"Shoes\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:70"
+              "location": "src\\test\\steps\\amazonSteps.ts:71"
             },
             "result": {
               "status": "passed",
-              "duration": 185831699
+              "duration": 18644200
             }
           },
           {
@@ -150,7 +150,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 625799
+              "duration": 417400
             }
           }
         ],
@@ -174,7 +174,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2245066499
+              "duration": 4231528800
             }
           },
           {
@@ -183,11 +183,11 @@
             "line": 18,
             "name": "I search for a product \"Shoes\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:77"
+              "location": "src\\test\\steps\\amazonSteps.ts:78"
             },
             "result": {
               "status": "passed",
-              "duration": 879619999
+              "duration": 761192900
             }
           },
           {
@@ -196,11 +196,11 @@
             "line": 19,
             "name": "I apply filter by brand \"Nike\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:83"
+              "location": "src\\test\\steps\\amazonSteps.ts:84"
             },
             "result": {
               "status": "passed",
-              "duration": 1609599599
+              "duration": 1401078999
             }
           },
           {
@@ -209,11 +209,11 @@
             "line": 20,
             "name": "I apply filter by material \"Leather\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:91"
+              "location": "src\\test\\steps\\amazonSteps.ts:92"
             },
             "result": {
               "status": "passed",
-              "duration": 1614529200
+              "duration": 1612279700
             }
           },
           {
@@ -222,11 +222,11 @@
             "line": 21,
             "name": "I should see products filtered by brand \"Nike\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:99"
+              "location": "src\\test\\steps\\amazonSteps.ts:100"
             },
             "result": {
               "status": "passed",
-              "duration": 865498600
+              "duration": 895847899
             }
           },
           {
@@ -235,11 +235,11 @@
             "line": 22,
             "name": "I should see products filtered by material \"Leather\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:107"
+              "location": "src\\test\\steps\\amazonSteps.ts:108"
             },
             "result": {
               "status": "passed",
-              "duration": 35046900
+              "duration": 88593199
             }
           },
           {
@@ -247,7 +247,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 182699
+              "duration": 133900
             }
           }
         ],
@@ -271,7 +271,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1407204200
+              "duration": 1464653499
             }
           },
           {
@@ -280,11 +280,11 @@
             "line": 25,
             "name": "I search for a product \"Shoes\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:77"
+              "location": "src\\test\\steps\\amazonSteps.ts:78"
             },
             "result": {
               "status": "passed",
-              "duration": 1487119300
+              "duration": 683904200
             }
           },
           {
@@ -293,11 +293,11 @@
             "line": 26,
             "name": "I add the first product to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:117"
+              "location": "src\\test\\steps\\amazonSteps.ts:116"
             },
             "result": {
               "status": "passed",
-              "duration": 4589641299
+              "duration": 4789534600
             }
           },
           {
@@ -306,11 +306,11 @@
             "line": 27,
             "name": "The product should be added to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:127"
+              "location": "src\\test\\steps\\amazonSteps.ts:126"
             },
             "result": {
               "status": "passed",
-              "duration": 259644000
+              "duration": 224913900
             }
           },
           {
@@ -318,7 +318,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 141799
+              "duration": 133400
             }
           }
         ],
@@ -342,33 +342,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2267371600
+              "duration": 2594101800
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 31,
+            "line": 30,
             "name": "I go to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:132"
+              "location": "src\\test\\steps\\amazonSteps.ts:131"
             },
             "result": {
               "status": "passed",
-              "duration": 484527900
+              "duration": 364077299
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 32,
+            "line": 31,
             "name": "I should see product in the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:141"
+              "location": "src\\test\\steps\\amazonSteps.ts:140"
             },
             "result": {
               "status": "passed",
-              "duration": 962515399
+              "duration": 889153800
             }
           },
           {
@@ -376,7 +376,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 87199
+              "duration": 96600
             }
           }
         ],

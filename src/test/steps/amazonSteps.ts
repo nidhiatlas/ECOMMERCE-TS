@@ -61,6 +61,7 @@ const isHomepageVisible = await page.isVisible('//span[normalize-space(text())="
 expect(isHomepageVisible).toBeTruthy();
 });
 
+
 When('I search for {string}', async (product: string) => {
   await page.fill('//input[@placeholder="Search Amazon.in"]', product,{ timeout: 10000 }); 
   await page.press('//input[@placeholder="Search Amazon.in"]', 'Enter',{ timeout: 10000 }); 
