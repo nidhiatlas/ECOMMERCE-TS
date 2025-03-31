@@ -10,7 +10,7 @@ let i: number = 0;
 setDefaultTimeout(20000);
 BeforeAll(async () => {
   
-  browser = await chromium.launch({ headless: false });
+  browser = await chromium.launch({ headless: false, slowMo:200 });
   context = await browser.newContext();
   page = await context.newPage();
 });
@@ -37,7 +37,7 @@ Given(`I open the Amazon.in homepage`, async () => {
 });
 
 When('I navigate to the login page', async () => {
-  await page.click('//span[text()="Account & Lists"]',{ timeout: 10000 }); 
+  await page.click('//span[normalize-space(text())="Account & Lists"]',{ timeout: 20000 }); 
 });
 
 When('I enter my username {string}', async (username: string) => {
@@ -98,15 +98,16 @@ When('I apply filter by material {string}', async (material: string) => {
 
 // Verify brand filter 
 Then('I should see products filtered by brand {string}', async (brand: string) => {
-  const brandCheckbox = page.locator(`(//i[@class='a-icon a-icon-checkbox'])[3]`);
-  
+  const brandCheckbox = page.locator('//span[text()="Nike"]/preceding::div[@class="a-checkbox a-checkbox-fancy s-navigation-checkbox aok-float-left"]//input[@type="checkbox"]');
+  //console.log(brandCheckbox, "brandCheckbox")
   // Check if the brand filter checkbox is selected
   const isChecked = await brandCheckbox.isChecked();
+  //console.log(isChecked, "ischecked")
   expect(isChecked).toBeTruthy();  
 });
 
 Then('I should see products filtered by material {string}', async (material: string) => {
-  const materialCheckbox = page.locator(`(//i[@class='a-icon a-icon-checkbox'])[57]`);
+  const materialCheckbox = page.locator(`(//i[@class='a-icon a-icon-checkbox'])[47]`);
   
   // Check if the material filter checkbox is selected
   const isChecked = await materialCheckbox.isChecked();

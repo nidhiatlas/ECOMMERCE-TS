@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4586683900
+              "duration": 3627156100
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 676873099
+              "duration": 14321751999
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1016521799
+              "duration": 1125849799
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 129437100
+              "duration": 237183700
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1149642999
+              "duration": 1233509200
             }
           },
           {
@@ -84,7 +84,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 290126699
+              "duration": 51643599
             }
           },
           {
@@ -92,7 +92,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 322499
+              "duration": 228699
             }
           }
         ],
@@ -116,7 +116,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1180064599
+              "duration": 2280947999
             }
           },
           {
@@ -129,7 +129,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 835038300
+              "duration": 1021520699
             }
           },
           {
@@ -142,7 +142,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18644200
+              "duration": 20803799
             }
           },
           {
@@ -150,7 +150,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 417400
+              "duration": 364099
             }
           }
         ],
@@ -174,7 +174,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4231528800
+              "duration": 1865870700
             }
           },
           {
@@ -187,7 +187,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 761192900
+              "duration": 963477400
             }
           },
           {
@@ -200,7 +200,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1401078999
+              "duration": 1974060400
             }
           },
           {
@@ -213,7 +213,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1612279700
+              "duration": 2104330999
             }
           },
           {
@@ -226,7 +226,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 895847899
+              "duration": 968857600
             }
           },
           {
@@ -235,11 +235,11 @@
             "line": 22,
             "name": "I should see products filtered by material \"Leather\"",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:108"
+              "location": "src\\test\\steps\\amazonSteps.ts:109"
             },
             "result": {
               "status": "passed",
-              "duration": 88593199
+              "duration": 29877400
             }
           },
           {
@@ -247,7 +247,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 133900
+              "duration": 90399
             }
           }
         ],
@@ -271,7 +271,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1464653499
+              "duration": 1923211300
             }
           },
           {
@@ -284,7 +284,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 683904200
+              "duration": 987960399
             }
           },
           {
@@ -293,11 +293,11 @@
             "line": 26,
             "name": "I add the first product to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:116"
+              "location": "src\\test\\steps\\amazonSteps.ts:117"
             },
             "result": {
               "status": "passed",
-              "duration": 4789534600
+              "duration": 4729274100
             }
           },
           {
@@ -306,11 +306,11 @@
             "line": 27,
             "name": "The product should be added to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:126"
+              "location": "src\\test\\steps\\amazonSteps.ts:127"
             },
             "result": {
               "status": "passed",
-              "duration": 224913900
+              "duration": 18855899
             }
           },
           {
@@ -318,7 +318,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 133400
+              "duration": 116799
             }
           }
         ],
@@ -342,7 +342,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2594101800
+              "duration": 1375458400
             }
           },
           {
@@ -351,11 +351,11 @@
             "line": 30,
             "name": "I go to the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:131"
+              "location": "src\\test\\steps\\amazonSteps.ts:132"
             },
             "result": {
               "status": "passed",
-              "duration": 364077299
+              "duration": 1124623399
             }
           },
           {
@@ -364,11 +364,11 @@
             "line": 31,
             "name": "I should see product in the cart",
             "match": {
-              "location": "src\\test\\steps\\amazonSteps.ts:140"
+              "location": "src\\test\\steps\\amazonSteps.ts:141"
             },
             "result": {
               "status": "passed",
-              "duration": 889153800
+              "duration": 882901600
             }
           },
           {
@@ -376,7 +376,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 96600
+              "duration": 68899
             }
           }
         ],
