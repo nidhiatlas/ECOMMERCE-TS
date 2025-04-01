@@ -2,6 +2,8 @@ import { Given, When, Then, BeforeAll, AfterAll, setDefaultTimeout, After, Statu
 import { expect } from '@playwright/test';
 import { Browser, Page, chromium, BrowserContext } from 'playwright';
 // import {Allure}
+import * as fs from 'fs';
+import * as path from 'path';
 import * as allure from 'allure-js-commons';
 let browser: Browser;
 let context: BrowserContext;
@@ -10,18 +12,35 @@ let i: number = 0;
 setDefaultTimeout(20000);
 BeforeAll(async () => {
   
-  browser = await chromium.launch({ headless: false, slowMo:200 });
-  context = await browser.newContext();
+  const allureResultsDir = path.join(__dirname, 'report', 'allure-results'); 
+  browser = await chromium.launch({ headless: false, slowMo: 1000 });
+  context = await browser.newContext({
+    recordVideo: {
+      dir: allureResultsDir,  
+      size: {
+        width: 1280,
+        height: 720
+      }
+    }
+  });
   page = await context.newPage();
 });
 
 After(async function (scenario) {
-  
   if (scenario.result?.status === Status.FAILED) {
+    // Capture screenshot and attach to the Allure report
     const screenshot = await page.screenshot();
-
-    // Attach screenshot to Allure report
     this.attach(screenshot, 'image/png'); 
+
+    // Capture video and attach to the Allure report
+    const video = await page.video();
+    if (video) {
+      const videoPath = await video.path();  
+      if (videoPath) {
+        const videoBuffer = fs.readFileSync(videoPath);  
+        this.attach(videoBuffer, 'video/webm');  
+      }
+    }
   }
 });
 AfterAll(async () => {
@@ -83,7 +102,7 @@ Given('I search for a product {string}', async (product: string) => {
 //filter by brand
 When('I apply filter by brand {string}', async (brand: string) => {
   const brandXPath = `//span[@class='a-size-base a-color-base' and text()="${brand}"]`;
-  await page.waitForSelector(brandXPath, { timeout: 10000 });
+  await page.waitForSelector(brandXPath, { timeout: 20000 });
   const brandFilter = page.locator(brandXPath);
   await brandFilter.click();
 });
