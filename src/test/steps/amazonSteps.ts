@@ -117,9 +117,9 @@ When('I apply filter by material {string}', async (material: string) => {
 
 // Verify brand filter 
 Then('I should see products filtered by brand {string}', async (brand: string) => {
-  const brandCheckbox = page.locator('(//span[text()="Nike"]/preceding::div[@class="a-checkbox a-checkbox-fancy s-navigation-checkbox aok-float-left"]//input[@type="checkbox"])[2]');
+  const brandCheckbox = page.locator('//span[text()="Nike"]/preceding-sibling::div[contains(@class, "a-checkbox")]//input[@type="checkbox"]');
   //console.log(brandCheckbox, "brandCheckbox")
-  // Check if the brand filter checkbox is selected
+  
   const isChecked = await brandCheckbox.isChecked();
   //console.log(isChecked, "ischecked")
   expect(isChecked).toBeTruthy();  
